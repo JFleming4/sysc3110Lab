@@ -21,5 +21,10 @@ public class AddressBook {
 	
 	public static void main(String args[]) {
 		System.out.println("Om Nom Nom");
+		BuddyInfo pie = new BuddyInfo();
+		pie.setName("Fred Fred Burger");
+		AddressBook book = new AddressBook();
+		book.addBuddy(pie);
+		book.removeBuddy();
 	}
 }
