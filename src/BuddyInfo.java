@@ -1,4 +1,4 @@
-
+//
 public class BuddyInfo {
 	private int number;
 	private String name;
