@@ -9,9 +9,9 @@ public class AddressBook {
 		friends = new ArrayList<BuddyInfo>();
 	}
 	
-	public void removeBuddy() {
-		if (!friends.isEmpty()) {
-			friends.remove(friends.size() -1);
+	public void removeBuddy(int i) {
+		if ( i <= friends.size() ) {
+			friends.remove(i);
 		}
 	}
 	
@@ -25,6 +25,6 @@ public class AddressBook {
 		pie.setName("Fred Fred Burger");
 		AddressBook book = new AddressBook();
 		book.addBuddy(pie);
-		book.removeBuddy();
+		book.removeBuddy(0);
 	}
 }
