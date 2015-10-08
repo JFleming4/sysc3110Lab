@@ -5,7 +5,15 @@ public class BuddyInfo {
 	private String address;
 	
 	public BuddyInfo(){
-
+		name = "";
+		number = 0;
+		address = "";
+	}
+	
+	public BuddyInfo(int num, String na, String add) {
+		number = num;
+		name = na;
+		address = add;
 	}
 	
 	public static void main(String []args){
@@ -36,5 +44,12 @@ public class BuddyInfo {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	
+	public String toString() {
+		if(name.equals("") || name == null) {
+			return "BuddyInfo";
+		}
+		return name;
 	}
 }
