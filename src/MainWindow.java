@@ -24,11 +24,11 @@ public class MainWindow extends JFrame {
 	public static final String add 		= "Add";
 	public static final String remove 	= "Remove";
 	
-	private JSplitPane splitpane;
-	private JList<BuddyInfo> buddyList;
+	private JSplitPane 					splitpane;
+	private JList<BuddyInfo> 			buddyList;
 	private DefaultListModel<BuddyInfo> buddyListModel;
-	private JPanel leftPanel;
-	private JPanel rightPanel;
+	private JPanel 						leftPanel;
+	private JPanel 						rightPanel;
 	private JPanel leftButtons;
 	private JButton addressSave;
 	private JButton buddyAdd;
@@ -154,9 +154,9 @@ public class MainWindow extends JFrame {
 			book.addBuddy(buddyListModel.getElementAt(i));
 		}
 		JFileChooser chooser = new JFileChooser();
-		if(chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+		if(chooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
 			try {
-				System.out.println(book);
+				//System.out.println(book);
 				BufferedWriter writer = new BufferedWriter(new FileWriter(chooser.getSelectedFile()));
 				writer.write(book.toString());
 				writer.close();
